@@ -1,6 +1,6 @@
 [build]
-  publish = "out"
-  command = "npm run build"
+  publish = "."
+  command = "echo 'No build needed - serving static files'"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -35,6 +35,7 @@
   to = "/banking.html"
   status = 200
 
+# Fallback for any other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -43,6 +44,7 @@
 [functions]
   directory = "netlify/functions"
 
+# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -51,6 +53,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Cache static assets
 [[headers]]
   for = "/images/*"
   [headers.values]
