@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ENGINEERS4URSERVICE</title>
+    <meta name="description" content="Contact ENGINEERS4URSERVICE for professional ICT infrastructure services in South Africa.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <!-- Replaced static navigation with component container -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Header -->
+        <!-- Updated header to match Next.js version exactly -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Contact <span class="gradient-text">Us</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Ready to transform your IT infrastructure? Get in touch with our team of certified engineers today.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <!-- Completely redesigned contact section to match Next.js version -->
+        <section class="pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="fade-in-up">
+                        <div class="bg-white border-0 shadow-lg hover-lift rounded-lg">
+                            <div class="p-6">
+                                <h2 class="text-2xl text-gray-900 flex items-center space-x-2 font-semibold mb-6">
+                                    <svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                    </svg>
+                                    <span>Send us a Message</span>
+                                </h2>
+                            </div>
+                            <div class="px-6 pb-6">
+                                <!-- Status Alert Placeholder -->
+                                <div id="form-status" class="mb-6 hidden">
+                                    <!-- Dynamic status messages will be inserted here -->
+                                </div>
+
+                                <form id="contact-form" class="space-y-6" action="send-email.php" method="POST">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                        <input id="name" name="name" type="text" required placeholder="Enter your full name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 focus:scale-105">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                        <input id="email" name="email" type="email" required placeholder="Enter your email address" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 focus:scale-105">
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                                        <textarea id="message" name="message" required placeholder="Tell us about your project requirements..." rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 focus:scale-105"></textarea>
+                                    </div>
+                                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md hover:scale-105 transition-all duration-300" id="submit-btn">
+                                        Send Message
+                                    </button>
+                                </form>
+
+                                <!-- Alternative Contact Methods -->
+                                <div class="mt-8 pt-6 border-t border-gray-200">
+                                    <p class="text-sm text-gray-600 mb-4">Having trouble with the form? Contact us directly:</p>
+                                    <div class="space-y-2">
+                                        <a href="mailto:info@engineers4urservice.co.za" class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-all duration-300 hover:translate-x-2">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                            </svg>
+                                            <span class="text-sm">info@engineers4urservice.co.za</span>
+                                        </a>
+                                        <a href="tel:0646171074" class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-all duration-300 hover:translate-x-2">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                            </svg>
+                                            <span class="text-sm">064 617 1074</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <!-- Contact Details -->
+                        <div class="fade-in-up" style="animation-delay: 200ms">
+                            <div class="bg-white border-0 shadow-lg hover-lift rounded-lg">
+                                <div class="p-6">
+                                    <h2 class="text-2xl text-gray-900 font-semibold mb-6">Get in Touch</h2>
+                                </div>
+                                <div class="px-6 pb-6 space-y-6 stagger-animation">
+                                    <div class="flex items-start space-x-4 hover-lift">
+                                        <svg class="h-6 w-6 text-red-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900">Email</h3>
+                                            <a href="mailto:info@engineers4urservice.co.za" class="text-blue-600 hover:text-blue-800 transition-colors">
+                                                info@engineers4urservice.co.za
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 hover-lift">
+                                        <svg class="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4 4a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900">Address</h3>
+                                            <p class="text-gray-600">
+                                                1 Pioneer Ave, Midrand<br>
+                                                Johannesburg, South Africa
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 hover-lift">
+                                        <svg class="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900">LinkedIn</h3>
+                                            <a href="https://linkedin.com/in/engineers4urservice-engineers4urservice-65230a2b2" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
+                                                Connect with us on LinkedIn
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 hover-lift">
+                                        <svg class="h-6 w-6 text-red-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900">Phone</h3>
+                                            <a href="tel:0646171074" class="text-blue-600 hover:text-blue-800 transition-colors">
+                                                064 617 1074
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 hover-lift">
+                                        <svg class="h-6 w-6 text-red-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900">Business Hours</h3>
+                                            <p class="text-gray-600">
+                                                Monday - Friday: 8:00 AM - 5:00 PM<br>
+                                                Saturday: 9:00 AM - 1:00 PM
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Why Choose Us -->
+                        <div class="fade-in-up" style="animation-delay: 400ms">
+                            <div class="bg-blue-50 border-0 shadow-lg hover-lift rounded-lg">
+                                <div class="p-6">
+                                    <h2 class="text-xl text-blue-900 font-semibold mb-4">Why Choose ENGINEERS4URSERVICE?</h2>
+                                    <ul class="space-y-3 text-sm stagger-animation">
+                                        <li class="flex items-center space-x-2 hover-lift">
+                                            <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                            <span class="text-blue-800">Certified OEM engineers</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 hover-lift">
+                                            <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                            <span class="text-blue-800">Reliable and scalable solutions</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 hover-lift">
+                                            <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                            <span class="text-blue-800">Tailor-made ICT infrastructure</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 hover-lift">
+                                            <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                            <span class="text-blue-800">Proven track record since 2023</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 hover-lift">
+                                            <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                            <span class="text-blue-800">Local South African expertise</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="mt-20 text-center bg-gradient-to-r from-gray-900 to-blue-900 text-white rounded-lg p-8 md:p-12 hover-lift fade-in-up" style="animation-delay: 600ms">
+                    <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+                    <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+                        Don't wait to transform your IT infrastructure. Contact us today for a free consultation and discover how
+                        we can help your business succeed.
+                    </p>
+                    <a href="#contact-form" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-all duration-300">
+                        Schedule Free Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Replaced static footer with component container -->
+    <div id="footer-container"></div>
+
+    <script src="js/main.js"></script>
+    <!-- Added component loading script -->
+    <script src="js/components.js"></script>
+    <!-- Updated mobile menu JavaScript to match about page functionality -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const formStatus = document.getElementById('form-status');
+
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch('send-email.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    formStatus.className = 'mb-6 p-4 bg-green-50 text-green-800 border border-green-200 rounded-md';
+                    formStatus.innerHTML = `
+                        <div class="flex items-center">
+                            <svg class="h-4 w-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <div class="font-medium">Success!</div>
+                                <div>${result.message}</div>
+                            </div>
+                        </div>
+                    `;
+                    this.reset();
+                } else {
+                    formStatus.className = 'mb-6 p-4 bg-red-50 text-red-800 border border-red-200 rounded-md';
+                    formStatus.innerHTML = `
+                        <div class="font-medium">Error!</div>
+                        <div>${result.message}</div>
+                    `;
+                }
+                formStatus.classList.remove('hidden');
+            } catch (error) {
+                formStatus.className = 'mb-6 p-4 bg-red-50 text-red-800 border border-red-200 rounded-md';
+                formStatus.innerHTML = `
+                    <div class="font-medium">Error!</div>
+                    <div>Something went wrong. Please try again later.</div>
+                `;
+                formStatus.classList.remove('hidden');
+            }
+
+            submitBtn.innerHTML = 'Send Message';
+            submitBtn.disabled = false;
+        });
+    </script>
+</body>
+</html>
