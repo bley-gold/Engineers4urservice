@@ -1,0 +1,58 @@
+ENGINEERS4URSERVICE - Upload Instructions for Domains.co.za
+================================================================
+
+IMPORTANT: Your hosting provider only supports traditional web technologies.
+This website is now configured to work perfectly with Domains.co.za hosting.
+
+FILES TO UPLOAD:
+===============
+✓ index.html (Homepage)
+✓ about.html (About page)
+✓ services.html (Services page)
+✓ projects.html (Projects page)
+✓ contact.html (Contact page)
+✓ banking.html (Banking information)
+✓ send-email.php (Contact form handler)
+✓ styles/ folder (Contains main.css)
+✓ js/ folder (Contains JavaScript files)
+✓ components/ folder (Contains nav.html and footer.html)
+✓ images/ folder (Contains all website images)
+✓ .htaccess (Apache configuration)
+
+UPLOAD STEPS:
+============
+1. Log into your Domains.co.za control panel
+2. Open File Manager or use FTP client
+3. Navigate to public_html folder
+4. Upload ALL files and folders maintaining the directory structure
+5. Set permissions for send-email.php to 755 (if needed)
+
+AFTER UPLOAD:
+============
+1. Visit your domain (e.g., https://yourdomain.co.za)
+2. Test all pages: Home, About, Services, Projects, Contact, Banking
+3. Test the contact form by sending a test message
+4. Check that all images load correctly
+5. Test on mobile devices
+
+EMAIL CONFIGURATION:
+===================
+Edit send-email.php and update these lines:
+- Line 8: $to_email = "your-email@yourdomain.co.za";
+- Line 9: $from_email = "noreply@yourdomain.co.za";
+
+TROUBLESHOOTING:
+===============
+- If contact form doesn't work: Check PHP mail() function is enabled
+- If images don't load: Check file paths and permissions
+- If pages don't load: Check .htaccess file is uploaded
+- For 404 errors: Ensure index.html is in public_html root
+
+WHAT WAS REMOVED:
+================
+- All Next.js files (not supported by your host)
+- Node.js dependencies (not supported)
+- TypeScript files (not needed for static site)
+- Build configuration files
+
+Your website is now ready for traditional web hosting! 🚀

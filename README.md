@@ -1,6 +1,6 @@
 # ENGINEERS4URSERVICE Static Website
 
-This is a static HTML/CSS/JavaScript version of the ENGINEERS4URSERVICE website, designed to work with traditional web hosting providers that support PHP but not Node.js/Next.js.
+This is a static HTML/CSS/JavaScript version of the ENGINEERS4URSERVICE website, designed to work with traditional web hosting providers like Domains.co.za that support PHP, HTML, CSS, and JavaScript.
 
 ## Files Structure
 
@@ -10,20 +10,25 @@ This is a static HTML/CSS/JavaScript version of the ENGINEERS4URSERVICE website,
 ├── contact.html            # Contact page
 ├── services.html           # Services page
 ├── about.html              # About page (to be created)
+├── projects.html           # Projects page
 ├── banking.html            # Banking page (to be created)
 ├── send-email.php          # PHP email handler
 ├── styles/
 │   └── main.css           # Main stylesheet
 ├── js/
 │   ├── main.js            # Main JavaScript functionality
-│   └── contact.js         # Contact form handling
+│   ├── contact.js         # Contact form handling
+│   └── components.js      # Component loading
+├── components/
+│   ├── nav.html           # Navigation component
+│   └── footer.html        # Footer component
 ├── images/                # Image assets
 └── README.md              # This file
 \`\`\`
 
 ## Setup Instructions
 
-1. **Upload Files**: Upload all files to your web hosting provider's public_html or www directory.
+1. **Upload Files**: Upload all files to your Domains.co.za hosting account's public_html or www directory using FTP or the file manager in your hosting control panel.
 
 2. **Configure Email**: 
    - Edit `send-email.php` and change the email addresses:
@@ -31,7 +36,7 @@ This is a static HTML/CSS/JavaScript version of the ENGINEERS4URSERVICE website,
      - `$from_email` - Your domain email address (e.g., noreply@yourdomain.com)
 
 3. **Test Email Functionality**:
-   - Make sure your hosting provider supports PHP mail() function
+   - Domains.co.za supports PHP, so the mail() function should work
    - Test the contact form to ensure emails are being sent
    - Check spam folders if emails don't arrive
 
@@ -52,6 +57,7 @@ This is a static HTML/CSS/JavaScript version of the ENGINEERS4URSERVICE website,
 - **Smooth Animations**: CSS animations and scroll effects
 - **SEO Optimized**: Proper meta tags and semantic HTML
 - **Cross-browser Compatible**: Works in all modern browsers
+- **Component System**: Reusable navigation and footer components
 
 ## PHP Email Configuration
 
@@ -76,6 +82,14 @@ The `send-email.php` script uses PHP's built-in `mail()` function. For better em
 - PHP mail() function enabled
 - File write permissions for logging (optional)
 
+## Domains.co.za Compatibility
+
+This website is fully compatible with Domains.co.za hosting services:
+- Uses only HTML, CSS, JavaScript, and PHP
+- No Node.js or Next.js dependencies
+- Works with Apache HTTP Server
+- Compatible with PHP and MySQL (if needed for future features)
+
 ## Security Notes
 
 - The contact form includes basic validation and sanitization
@@ -93,6 +107,17 @@ To customize the website:
 4. **Images**: Replace images in `/images/` folder
 5. **Functionality**: Modify JavaScript in `/js/` folder
 
+## Upload Instructions for Domains.co.za
+
+1. **Access File Manager**: Log into your Domains.co.za control panel
+2. **Navigate to public_html**: Go to the public_html folder
+3. **Upload Files**: Upload all files and folders maintaining the directory structure
+4. **Set Permissions**: Ensure PHP files have execute permissions (755)
+5. **Test Website**: Visit your domain to test the website
+
 ## Support
 
-For technical support or customization requests, contact your web developer or hosting provider.
+For technical support:
+- Website issues: Contact your web developer
+- Hosting issues: Contact Domains.co.za support
+- Email configuration: Check Domains.co.za knowledge base
