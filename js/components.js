@@ -23,22 +23,22 @@ function initializeMobileMenu() {
     mobileMenuButton.addEventListener("click", (e) => {
       e.preventDefault()
       const isHidden = mobileMenu.classList.contains("hidden")
-      const arrow = mobileMenuButton.querySelector("svg")
+      const icon = mobileMenuButton.querySelector("svg")
       
       if (isHidden) {
         mobileMenu.classList.remove("hidden")
         // Trigger reflow for animation
         mobileMenu.offsetHeight
         mobileMenu.style.animation = "slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards"
-        // Rotate arrow up
-        if (arrow) {
-          arrow.style.transform = "rotate(180deg)"
+        // Change to X icon
+        if (icon) {
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>'
         }
       } else {
         mobileMenu.style.animation = "slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards"
-        // Rotate arrow down
-        if (arrow) {
-          arrow.style.transform = "rotate(0deg)"
+        // Change back to hamburger
+        if (icon) {
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>'
         }
         setTimeout(() => {
           mobileMenu.classList.add("hidden")
@@ -50,11 +50,11 @@ function initializeMobileMenu() {
     document.addEventListener("click", (e) => {
       if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
         if (!mobileMenu.classList.contains("hidden")) {
-          const arrow = mobileMenuButton.querySelector("svg")
+          const icon = mobileMenuButton.querySelector("svg")
           mobileMenu.style.animation = "slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards"
-          // Rotate arrow down
-          if (arrow) {
-            arrow.style.transform = "rotate(0deg)"
+          // Change back to hamburger
+          if (icon) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>'
           }
           setTimeout(() => {
             mobileMenu.classList.add("hidden")
@@ -66,11 +66,11 @@ function initializeMobileMenu() {
     // Close mobile menu on window resize
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 1024) {
-        const arrow = mobileMenuButton.querySelector("svg")
+        const icon = mobileMenuButton.querySelector("svg")
         mobileMenu.classList.add("hidden")
-        // Reset arrow rotation
-        if (arrow) {
-          arrow.style.transform = "rotate(0deg)"
+        // Reset to hamburger
+        if (icon) {
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>'
         }
       }
     })
