@@ -22,12 +22,9 @@ body {
 /* Enhanced Navigation Styles */
 nav {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 nav.scrolled {
-  background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--shadow-medium);
 }
 
@@ -61,9 +58,7 @@ nav.scrolled {
 
 /* Enhanced Mobile Menu */
 #mobile-menu {
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: white;
   box-shadow: var(--shadow-large);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -510,16 +505,16 @@ select:hover {
 @media (max-width: 768px) {
   /* Mobile navigation enhancements */
   nav .flex.justify-between.items-center {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
     height: 4rem;
   }
 
-  .flex.items-center span {
-    font-size: 1rem;
-    display: block !important; /* Show company name on mobile */
+  nav .flex.items-center span {
+    font-size: 0.875rem;
+    line-height: 1.2;
   }
 
-  .flex.items-center svg {
+  nav .flex.items-center svg {
     height: 1.75rem;
     width: 1.75rem;
   }
@@ -531,14 +526,15 @@ select:hover {
   }
 
   #mobile-menu .space-y-2 {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem;
   }
 
   #mobile-menu a {
-    padding: 1rem;
-    font-size: 1rem;
+    padding: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
     border-radius: 0.75rem;
+    min-height: 48px;
   }
 
   /* Carousel mobile optimizations */
@@ -629,20 +625,23 @@ select:hover {
 @media (max-width: 640px) {
   /* Small mobile devices */
   nav .h-16 {
-    height: 3.5rem;
+    height: 3.75rem;
   }
 
-  .flex.items-center svg {
-    height: 1.5rem;
-    width: 1.5rem;
+  nav .flex.items-center svg {
+    height: 1.25rem;
+    width: 1.25rem;
   }
 
-  .flex.items-center span {
-    font-size: 0.875rem;
+  nav .flex.items-center span {
+    font-size: 0.75rem;
+    line-height: 1.1;
   }
 
   .mobile-menu-button {
-    padding: 0.625rem;
+    padding: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   /* Carousel small mobile */
@@ -683,6 +682,21 @@ select:hover {
     padding-right: 1rem !important;
   }
 
+  /* Mobile menu improvements for small screens */
+  #mobile-menu .space-y-2 {
+    padding: 0.75rem 0.5rem;
+  }
+
+  #mobile-menu a {
+    padding: 0.625rem;
+    font-size: 0.8125rem;
+  }
+
+  #mobile-menu .border-b {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   /* Button adjustments */
   .px-8.py-4 {
     padding: 0.75rem 1.25rem !important;
@@ -710,17 +724,18 @@ select:hover {
 @media (max-width: 480px) {
   /* Extra small devices */
   nav .max-w-7xl {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
-  .flex.items-center svg {
-    height: 1.25rem;
-    width: 1.25rem;
+  nav .flex.items-center svg {
+    height: 1rem;
+    width: 1rem;
   }
 
-  .flex.items-center span {
-    font-size: 0.75rem;
+  nav .flex.items-center span {
+    font-size: 0.6875rem;
+    line-height: 1;
   }
 
   .carousel-slide h1 {
@@ -738,6 +753,28 @@ select:hover {
 
   .carousel-arrow.next {
     right: 8px;
+  }
+
+  /* Extra small mobile menu */
+  #mobile-menu .space-y-2 {
+    padding: 0.5rem;
+  }
+
+  #mobile-menu a {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    min-height: 44px;
+  }
+
+  #mobile-menu .border-b {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .mobile-menu-button {
+    padding: 0.375rem;
+    min-width: 40px;
+    min-height: 40px;
   }
 }
 

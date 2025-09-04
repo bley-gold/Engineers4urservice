@@ -23,14 +23,23 @@ function initializeMobileMenu() {
     mobileMenuButton.addEventListener("click", (e) => {
       e.preventDefault()
       const isHidden = mobileMenu.classList.contains("hidden")
+      const arrow = mobileMenuButton.querySelector("svg")
       
       if (isHidden) {
         mobileMenu.classList.remove("hidden")
         // Trigger reflow for animation
         mobileMenu.offsetHeight
         mobileMenu.style.animation = "slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards"
+        // Rotate arrow up
+        if (arrow) {
+          arrow.style.transform = "rotate(180deg)"
+        }
       } else {
         mobileMenu.style.animation = "slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards"
+        // Rotate arrow down
+        if (arrow) {
+          arrow.style.transform = "rotate(0deg)"
+        }
         setTimeout(() => {
           mobileMenu.classList.add("hidden")
         }, 300)
@@ -41,7 +50,12 @@ function initializeMobileMenu() {
     document.addEventListener("click", (e) => {
       if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
         if (!mobileMenu.classList.contains("hidden")) {
+          const arrow = mobileMenuButton.querySelector("svg")
           mobileMenu.style.animation = "slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards"
+          // Rotate arrow down
+          if (arrow) {
+            arrow.style.transform = "rotate(0deg)"
+          }
           setTimeout(() => {
             mobileMenu.classList.add("hidden")
           }, 300)
@@ -52,7 +66,12 @@ function initializeMobileMenu() {
     // Close mobile menu on window resize
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 1024) {
+        const arrow = mobileMenuButton.querySelector("svg")
         mobileMenu.classList.add("hidden")
+        // Reset arrow rotation
+        if (arrow) {
+          arrow.style.transform = "rotate(0deg)"
+        }
       }
     })
   }
