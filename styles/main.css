@@ -76,7 +76,7 @@ nav.scrolled {
 
 #mobile-menu a {
   min-height: 52px;
-  display: flex;
+  font-size: 1.125rem !important;
   align-items: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 0.75rem;
@@ -88,6 +88,9 @@ nav.scrolled {
 }
 
 #mobile-menu a::before {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   content: '';
   position: absolute;
   inset: 0;
@@ -111,9 +114,21 @@ nav.scrolled {
 }
 
 #mobile-menu a span {
-  color: #1f2937 !important;
+  font-size: 1.125rem !important;
   font-weight: 500 !important;
-  font-size: 1rem !important;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#mobile-menu a:hover {
+  background-color: #f3f4f6 !important;
+  color: #2563eb !important;
+}
+
+#mobile-menu a:hover span {
+  color: #2563eb !important;
+  font-size: 1.125rem !important;
 }
 
 #mobile-menu a svg {
@@ -124,6 +139,8 @@ nav.scrolled {
 #mobile-menu a:hover svg {
   color: #2563eb !important;
 }
+  visibility: visible !important;
+  opacity: 1 !important;
 
 /* Carousel Enhancements */
 .carousel-container {
@@ -669,8 +686,12 @@ select:hover {
 
   /* Company name for small screens */
   nav .text-lg.font-bold {
-    font-size: 0.875rem !important;
+    font-size: 1rem !important;
     font-weight: 700 !important;
+    color: #2563eb !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .mobile-menu-button {
@@ -724,14 +745,20 @@ select:hover {
 
   #mobile-menu a {
     padding: 0.625rem;
-    font-size: 0.9375rem !important;
+    font-size: 1rem !important;
     color: #1f2937 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   #mobile-menu a span {
-    font-size: 0.9375rem !important;
+    font-size: 1rem !important;
     color: #1f2937 !important;
     font-weight: 500 !important;
+    display: inline !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   /* Button adjustments */
@@ -771,13 +798,19 @@ select:hover {
   }
 
   /* Company name for extra small screens */
-  nav .text-lg.font-bold {
-    font-size: 0.75rem !important;
+  nav .text-lg.font-bold,
+  nav .text-xl.font-bold {
+    font-size: 0.875rem !important;
     font-weight: 700 !important;
+    color: #2563eb !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .carousel-slide h1 {
     font-size: 1.5rem !important;
+    color: white !important;
   }
 
   .carousel-arrow {
@@ -800,15 +833,21 @@ select:hover {
 
   #mobile-menu a {
     padding: 0.5rem;
-    font-size: 0.875rem !important;
+    font-size: 0.9375rem !important;
     min-height: 44px;
     color: #1f2937 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   #mobile-menu a span {
-    font-size: 0.875rem !important;
+    font-size: 0.9375rem !important;
     color: #1f2937 !important;
     font-weight: 500 !important;
+    display: inline !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .mobile-menu-button {
