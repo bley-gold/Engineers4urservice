@@ -83,6 +83,8 @@ nav.scrolled {
   margin: 0.25rem 0;
   position: relative;
   overflow: hidden;
+  color: #374151 !important;
+  font-weight: 500;
 }
 
 #mobile-menu a::before {
@@ -101,10 +103,25 @@ nav.scrolled {
 #mobile-menu a:hover {
   transform: translateX(8px);
   box-shadow: var(--shadow-soft);
+  color: #2563eb !important;
 }
 
 #mobile-menu a:active {
   transform: translateX(4px) scale(0.98);
+}
+
+#mobile-menu a span {
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+#mobile-menu a svg {
+  color: #9ca3af !important;
+  transition: color 0.3s ease;
+}
+
+#mobile-menu a:hover svg {
+  color: #2563eb !important;
 }
 
 /* Carousel Enhancements */
@@ -520,6 +537,14 @@ select:hover {
     width: 1.5rem !important;
   }
 
+  /* Ensure company name is visible on mobile */
+  nav .text-blue-600 {
+    display: block !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #2563eb !important;
+  }
+
   /* Mobile menu improvements */
   #mobile-menu {
     margin-top: 0;
@@ -536,6 +561,13 @@ select:hover {
     font-weight: 500;
     border-radius: 0.75rem;
     min-height: 48px;
+    color: #374151 !important;
+  }
+
+  #mobile-menu a span {
+    font-size: 1rem !important;
+    color: #374151 !important;
+    font-weight: 500 !important;
   }
 
   /* Carousel mobile optimizations */
