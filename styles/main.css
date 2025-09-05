@@ -83,7 +83,7 @@ nav.scrolled {
   margin: 0.25rem 0;
   position: relative;
   overflow: hidden;
-  color: #374151 !important;
+  color: #1f2937 !important;
   font-weight: 500;
 }
 
@@ -111,12 +111,13 @@ nav.scrolled {
 }
 
 #mobile-menu a span {
-  color: inherit !important;
-  font-weight: inherit !important;
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
 }
 
 #mobile-menu a svg {
-  color: #9ca3af !important;
+  color: #6b7280 !important;
   transition: color 0.3s ease;
 }
 
@@ -537,12 +538,12 @@ select:hover {
     width: 1.5rem !important;
   }
 
-  /* Ensure company name is visible on mobile */
-  nav .text-blue-600 {
-    display: block !important;
+  /* Company name mobile styling */
+  nav .text-lg.font-bold {
     font-size: 1rem !important;
     font-weight: 700 !important;
     color: #2563eb !important;
+    display: block !important;
   }
 
   /* Mobile menu improvements */
@@ -561,12 +562,12 @@ select:hover {
     font-weight: 500;
     border-radius: 0.75rem;
     min-height: 48px;
-    color: #374151 !important;
+    color: #1f2937 !important;
   }
 
   #mobile-menu a span {
     font-size: 1rem !important;
-    color: #374151 !important;
+    color: #1f2937 !important;
     font-weight: 500 !important;
   }
 
@@ -666,6 +667,12 @@ select:hover {
     width: 1.25rem !important;
   }
 
+  /* Company name for small screens */
+  nav .text-lg.font-bold {
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+  }
+
   .mobile-menu-button {
     padding: 0.5rem;
     min-width: 44px;
@@ -718,6 +725,13 @@ select:hover {
   #mobile-menu a {
     padding: 0.625rem;
     font-size: 0.9375rem !important;
+    color: #1f2937 !important;
+  }
+
+  #mobile-menu a span {
+    font-size: 0.9375rem !important;
+    color: #1f2937 !important;
+    font-weight: 500 !important;
   }
 
   /* Button adjustments */
@@ -756,6 +770,12 @@ select:hover {
     width: 1.125rem !important;
   }
 
+  /* Company name for extra small screens */
+  nav .text-lg.font-bold {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+  }
+
   .carousel-slide h1 {
     font-size: 1.5rem !important;
   }
@@ -782,6 +802,13 @@ select:hover {
     padding: 0.5rem;
     font-size: 0.875rem !important;
     min-height: 44px;
+    color: #1f2937 !important;
+  }
+
+  #mobile-menu a span {
+    font-size: 0.875rem !important;
+    color: #1f2937 !important;
+    font-weight: 500 !important;
   }
 
   .mobile-menu-button {
