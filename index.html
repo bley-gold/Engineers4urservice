@@ -24,14 +24,16 @@
                         <span class="ml-2 text-xl font-bold text-blue-600">ENGINEERS4URSERVICE</span>
                     </div>
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="index.html" class="text-blue-600 px-3 py-2 text-sm font-medium border-b-2 border-blue-600" style="color: #2563eb !important; font-size: 0.875rem !important;">Home</a>
-                        <a href="about.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium" style="color: #374151 !important; font-size: 0.875rem !important;">About Us</a>
-                        <a href="services.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium" style="color: #374151 !important; font-size: 0.875rem !important;">Services</a>
-                        <a href="projects.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium" style="color: #374151 !important; font-size: 0.875rem !important;">Projects</a>
-                        <a href="contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium" style="color: #374151 !important; font-size: 0.875rem !important;">Contact</a>
-                        <a href="banking.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium" style="color: #374151 !important; font-size: 0.875rem !important;">Banking</a>
-                        <a href="contact.html" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700" style="background-color: #dc2626 !important; color: white !important; font-size: 0.875rem !important;">Get Quote</a>
+                        <!-- Updated navbar to match about page structure with proper active states -->
+                        <a href="index.html" class="text-blue-600 px-3 py-2 text-sm font-medium border-b-2 border-blue-600">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About Us</a>
+                        <a href="services.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="projects.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="banking.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Banking</a>
+                        <a href="contact.html" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700">Get Quote</a>
                     </div>
+                    <!-- Enhanced mobile menu button with proper functionality -->
                     <div class="md:hidden flex items-center">
                         <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -41,14 +43,15 @@
                     </div>
                 </div>
             </div>
+            <!-- Enhanced mobile menu with Projects link -->
             <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="index.html" class="block px-3 py-2 text-base font-medium" style="color: #2563eb !important; font-size: 1.125rem !important; font-weight: 500 !important; display: block !important;">Home</a>
-                    <a href="about.html" class="block px-3 py-2 text-base font-medium hover:text-blue-600" style="color: #1f2937 !important; font-size: 1.125rem !important; font-weight: 500 !important; display: block !important;">About Us</a>
-                    <a href="services.html" class="block px-3 py-2 text-base font-medium hover:text-blue-600" style="color: #1f2937 !important; font-size: 1.125rem !important; font-weight: 500 !important; display: block !important;">Services</a>
-                    <a href="projects.html" class="block px-3 py-2 text-base font-medium hover:text-blue-600" style="color: #1f2937 !important; font-size: 1.125rem !important; font-weight: 500 !important; display: block !important;">Projects</a>
-                    <a href="contact.html" class="block px-3 py-2 text-base font-medium hover:text-blue-600" style="color: #1f2937 !important; font-size: 1.125rem !important; font-weight: 500 !important; display: block !important;">Contact</a>
-                    <a href="banking.html" class="block px-3 py-2 text-base font-medium hover:text-blue-600" style="color: #1f2937 !important; font-size: 1.125rem !important; font-weight: 500 !important; display: block !important;">Banking</a>
+                    <a href="index.html" class="text-blue-600 block px-3 py-2 text-base font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">About Us</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">Services</a>
+                    <a href="projects.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">Projects</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">Contact</a>
+                    <a href="banking.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">Banking</a>
                 </div>
             </div>
         </nav>
@@ -118,7 +121,7 @@
             <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20">
                 <div class="glass-effect rounded-full p-4 animate-bounce cursor-pointer" onclick="scrollToSection('partnership-section')">
                     <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7-7m0 0l-7 7m7 7V3"></path>
                     </svg>
                 </div>
             </div>

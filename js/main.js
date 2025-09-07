@@ -201,16 +201,16 @@ function initScrollAnimations() {
           // Animate children with stagger effect
           const children = element.children
           Array.from(children).forEach((child, index) => {
-            setTimeout(() => {
-              child.style.opacity = "1"
-              child.style.transform = "translateY(0)"
-              child.style.animation = `fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards`
-            }, index * 100)
+            // Force immediate visibility
+            child.style.opacity = "1"
+            child.style.transform = "translateY(0)"
+            child.style.visibility = "visible"
           })
         } else {
+          // Force immediate visibility for all elements
           element.style.opacity = "1"
           element.style.transform = "translateY(0)"
-          element.style.animation = "fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards"
+          element.style.visibility = "visible"
         }
         
         observer.unobserve(element)
@@ -225,8 +225,9 @@ function initScrollAnimations() {
 
   animatedElements.forEach((element) => {
     // Set initial state
-    element.style.opacity = "0"
-    element.style.transform = "translateY(30px)"
+    element.style.opacity = "1"
+    element.style.transform = "translateY(0)"
+    element.style.visibility = "visible"
     element.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)"
     observer.observe(element)
   })
