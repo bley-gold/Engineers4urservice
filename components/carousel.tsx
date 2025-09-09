@@ -60,8 +60,8 @@ export default function Carousel({ slides, autoPlay = true, autoPlayInterval = 5
             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-red-900/60 flex items-center">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 {/* Added proper margins to prevent text from being covered by arrows */}
-                <div className="max-w-2xl text-white mx-auto text-center lg:text-left lg:mx-0 px-16 sm:px-20 lg:px-0">
-                  <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">{slide.title}</h2>
+               <div className="max-w-2xl text-white mx-auto text-center lg:text-left lg:mx-0 px-8 sm:px-12 md:px-16 lg:px-0">
+ <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">{slide.title}</h2>
                   <p className="text-xl md:text-2xl mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                     {slide.description}
                   </p>
