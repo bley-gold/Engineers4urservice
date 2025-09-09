@@ -594,7 +594,12 @@ select:hover {
   }
 
   nav .flex.items-center span {
-    font-size: 0.875rem;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #2563eb !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     line-height: 1.2;
   }
 
@@ -721,7 +726,12 @@ select:hover {
   }
 
   nav .flex.items-center span {
-    font-size: 0.75rem;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    color: #2563eb !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     line-height: 1.1;
   }
 
@@ -755,17 +765,9 @@ select:hover {
   }
 
   /* Touch-friendly buttons */
-    font-size: 1rem !important;
   .bg-blue-600,
   .carousel-slide a {
     min-height: 48px;
-    color: #1f2937 !important;
-  }
-
-  #mobile-menu a span {
-    font-size: 1rem !important;
-    color: #1f2937 !important;
-    font-weight: 500 !important;
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
   }
@@ -784,15 +786,6 @@ select:hover {
   #mobile-menu a {
     padding: 0.625rem;
     font-size: 0.8125rem;
-  }
-
-  #mobile-menu .border-b {
-    margin-bottom: 0.75rem;
-    font-size: 1rem !important;
-    color: #1f2937 !important;
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
   }
 
   #mobile-menu a span {
@@ -823,21 +816,25 @@ select:hover {
   }
 }
 
-  .bg-white\/5 {
+@media (max-width: 479px) {
   /* Extra small devices */
   nav .max-w-7xl {
-  .text-3xl.md\\:text-4xl {
+    padding-left: 0.5rem;
     padding-right: 0.5rem;
-@media (max-width: 479px) {
+  }
 
-  .text-4xl.md\\:text-5xl {
+  nav .flex.items-center svg {
     height: 1rem;
     width: 1rem;
   }
 
   nav .flex.items-center span {
-    height: 1.125rem !important;
-    width: 1.125rem !important;
+    font-size: 0.8125rem !important;
+    font-weight: 700 !important;
+    color: #2563eb !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   /* Company name for extra small screens */
@@ -849,20 +846,45 @@ select:hover {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+  }
 
   .carousel-arrow {
-    width: 40px;
-  .text-4xl.md\\:text-5xl.font-bold {
-    color: white !important;
+    width: 32px;
+    height: 32px;
   }
 
   .carousel-arrow.prev {
     left: 6px;
-  .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 {
+  }
 
   .carousel-arrow.next {
     right: 6px;
   }
+
+  #mobile-menu .space-y-2 {
+    padding: 0.5rem;
+  }
+
+  #mobile-menu a {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  #mobile-menu a span {
+    font-size: 1rem !important;
+    color: #1f2937 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-weight: 500 !important;
+  }
+
+  .mobile-menu-button {
+    padding: 0.375rem;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
 
 @media (max-width: 639px) {
   #mobile-menu .space-y-2 {
@@ -871,19 +893,20 @@ select:hover {
 
   #mobile-menu a {
     padding: 0.5rem;
-    height: 1.25rem !important;
-    width: 1.25rem !important;
+    font-size: 0.75rem;
   }
 
   /* Company name for small screens */
+  nav .text-lg.font-bold,
+  nav .text-xl.font-bold {
     font-size: 0.9375rem !important;
-    font-size: 1rem !important;
-    color: #1f2937 !important;
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
     font-weight: 700 !important;
     color: #2563eb !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
   #mobile-menu a span {
     font-size: 0.9375rem !important;
     color: #1f2937 !important;
