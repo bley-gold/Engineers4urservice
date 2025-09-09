@@ -243,26 +243,6 @@ nav .flex.items-center span {
 
 /* Ensure scroll indicator is visible on all screen sizes */
 /* FIX: Ensure bullet point text in service lists is visible on mobile */
-@media (max-width: 767px) {
-  .services-list li {
-    display: flex !important; /* keep flex so icon + text align */
-    align-items: center !important;
-  }
-  .services-list li span {
-    display: inline-block !important;
-    font-size: 1rem !important;
-    color: #1f2937 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    font-weight: 500 !important;
-  }
-  .services-list li svg {
-    flex-shrink: 0;
-    margin-right: 0.5em;
-  }
-}
-
-
 @media (max-width: 479px) {
   .glass-effect {
     padding: 0.625rem;
