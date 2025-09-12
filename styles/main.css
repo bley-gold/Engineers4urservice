@@ -193,8 +193,8 @@ nav .flex.items-center span {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  /* Made arrows more transparent */
-  background: rgba(255, 255, 255, 0.1);
+  /* Made arrows even more transparent */
+  background: rgba(255, 255, 255, 0.08);
   border: none;
   border-radius: 50%;
   width: 56px;
@@ -212,7 +212,7 @@ nav .flex.items-center span {
 
 .carousel-arrow:hover {
   /* Reduced hover opacity for better transparency */
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-50%) scale(1.15);
   box-shadow: var(--shadow-large);
 }
@@ -687,7 +687,7 @@ select:hover {
     width: 40px;
     height: 40px;
     /* More transparent arrows on mobile */
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 30;
   }
 
