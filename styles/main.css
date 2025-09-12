@@ -44,7 +44,7 @@ nav.scrolled {
 }
 
 .mobile-menu-button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(220, 38, 38, 0.1));
@@ -93,7 +93,7 @@ nav.scrolled {
   display: flex !important;
   visibility: visible !important;
   opacity: 1 !important;
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(220, 38, 38, 0.05));
@@ -177,7 +177,7 @@ nav .flex.items-center span {
 }
 
 .carousel-slide::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(45deg, rgba(37, 99, 235, 0.1), rgba(220, 38, 38, 0.1));
@@ -203,7 +203,7 @@ nav .flex.items-center span {
   justify-content: center;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 10;
+  z-index: 20;
   box-shadow: var(--shadow-medium);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -247,7 +247,7 @@ nav .flex.items-center span {
   .glass-effect {
     padding: 0.625rem;
   }
-  
+
   .glass-effect svg {
     height: 1rem;
     width: 1rem;
@@ -315,7 +315,8 @@ nav .flex.items-center span {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -324,7 +325,8 @@ nav .flex.items-center span {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -333,10 +335,15 @@ nav .flex.items-center span {
 }
 
 @keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
     transform: translateY(0);
   }
-  40%, 43% {
+  40%,
+  43% {
     transform: translateY(-15px);
   }
   70% {
@@ -394,14 +401,30 @@ nav .flex.items-center span {
   animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
-.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
-.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
-.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
-.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
-.stagger-animation > *:nth-child(7) { animation-delay: 0.7s; }
-.stagger-animation > *:nth-child(8) { animation-delay: 0.8s; }
+.stagger-animation > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-animation > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-animation > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-animation > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-animation > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stagger-animation > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.stagger-animation > *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.stagger-animation > *:nth-child(8) {
+  animation-delay: 0.8s;
+}
 
 /* Enhanced Hover Effects */
 .hover-lift {
@@ -410,7 +433,7 @@ nav .flex.items-center span {
 }
 
 .hover-lift::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(220, 38, 38, 0.05));
@@ -441,7 +464,7 @@ nav .flex.items-center span {
 }
 
 .card-hover::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -492,7 +515,7 @@ nav .flex.items-center span {
 }
 
 .btn-primary::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
@@ -568,22 +591,15 @@ select:hover {
   .carousel-arrow {
     width: 48px;
     height: 48px;
+    background: rgba(0, 0, 0, 0.4);
   }
 
-.carousel-arrow.prev {
-  @apply absolute top-1/2 left-2 -translate-y-1/2 bg-black/40 rounded-full p-2;
-}
-.carousel-arrow.next {
-  @apply absolute top-1/2 right-2 -translate-y-1/2 bg-black/40 rounded-full p-2;
-}
+  .carousel-arrow.prev {
+    left: 16px;
+  }
 
-
-
-  /* Navigation adjustments */
-  nav .flex.items-center span {
-    font-size: 1.125rem !important;
-    display: block !important;
-    visibility: visible !important;
+  .carousel-arrow.next {
+    right: 16px;
   }
 }
 
@@ -649,9 +665,10 @@ select:hover {
   }
 
   .carousel-arrow {
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30;
   }
 
   .carousel-arrow.prev {
@@ -850,16 +867,17 @@ select:hover {
   }
 
   .carousel-arrow {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.6);
   }
 
   .carousel-arrow.prev {
-    left: 6px;
+    left: 12px;
   }
 
   .carousel-arrow.next {
-    right: 6px;
+    right: 12px;
   }
 
   #mobile-menu .space-y-2 {
@@ -887,40 +905,20 @@ select:hover {
   }
 }
 
-@media (max-width: 639px) {
-  #mobile-menu .space-y-2 {
-    padding: 0.5rem;
+@media (max-width: 359px) {
+  /* Smallest mobile screens - minimal arrow size but still usable */
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.7);
   }
 
-  #mobile-menu a {
-    padding: 0.5rem;
-    font-size: 0.75rem;
+  .carousel-arrow.prev {
+    left: 6px;
   }
 
-  /* Company name for small screens */
-  nav .text-lg.font-bold,
-  nav .text-xl.font-bold {
-    font-size: 0.9375rem !important;
-    font-weight: 700 !important;
-    color: #2563eb !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  #mobile-menu a span {
-    font-size: 0.9375rem !important;
-    color: #1f2937 !important;
-    font-weight: 500 !important;
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  .mobile-menu-button {
-    padding: 0.375rem;
-    min-width: 40px;
-    min-height: 40px;
+  .carousel-arrow.next {
+    right: 6px;
   }
 }
 
@@ -1071,7 +1069,7 @@ select:focus {
 }
 
 .loading::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -1090,227 +1088,7 @@ select:focus {
   }
 }
 
-/* Scroll Indicator */"use client"
-
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-
-interface CarouselSlide {
-  id: number
-  title: string
-  description: string
-  image: string
-  cta?: string
-  link?: string
-}
-
-interface CarouselProps {
-  slides: CarouselSlide[]
-  autoPlay?: boolean
-  autoPlayInterval?: number
-}
-
-export default function Carousel({ slides, autoPlay = true, autoPlayInterval = 5000 }: CarouselProps) {
-  const [currentSlide, setCurrentSlide] = useState(0)
-
-  useEffect(() => {
-    if (!autoPlay) return
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, autoPlayInterval)
-
-    return () => clearInterval(interval)
-  }, [autoPlay, autoPlayInterval, slides.length])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index)
-  }
-
-  return (
-    <div className="carousel-container relative h-[600px] rounded-lg overflow-hidden">
-      <div className="carousel-track h-full" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-        {slides.map((slide) => (
-          <div key={slide.id} className="carousel-slide relative h-full">
-            <Image
-              src={slide.image || "/placeholder.svg"}
-              alt={slide.title}
-              fill
-              className="object-cover"
-              priority={slide.id === 1}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-red-900/60 flex items-center">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                {/* Added proper margins to prevent text from being covered by arrows */}
-                <div className="max-w-2xl text-white mx-auto text-center lg:text-left lg:mx-0 px-16 sm:px-20 lg:px-0">
-                  <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">{slide.title}</h2>
-                  <p className="text-xl md:text-2xl mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                    {slide.description}
-                  </p>
-                  {slide.cta && slide.link && (
-                    <Link href={slide.link}>
-                      <button
-                        className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 animate-fade-in-up"
-                        style={{ animationDelay: "0.4s" }}
-                      >
-                        {slide.cta}
-                      </button>
-                    </Link>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Navigation Arrows */}
-      <button onClick={prevSlide} className="carousel-arrow prev group" aria-label="Previous slide">
-        <ChevronLeft
-          className="h-6 w-6 text-white group-hover:text-blue-200 transition-colors animate-arrow opacity-80"
-          style={{ animationDirection: "reverse" }}
-        />
-      </button>
-
-      <button onClick={nextSlide} className="carousel-arrow next group" aria-label="Next slide">
-        <ChevronRight className="h-6 w-6 text-white group-hover:text-blue-200 transition-colors animate-arrow opacity-80" />
-      </button>
-
-      {/* Dots Indicator */}
-      <div className="carousel-dots absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`carousel-dot ${index === currentSlide ? "active" : ""}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-"use client"
-
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-
-interface CarouselSlide {
-  id: number
-  title: string
-  description: string
-  image: string
-  cta?: string
-  link?: string
-}
-
-interface CarouselProps {
-  slides: CarouselSlide[]
-  autoPlay?: boolean
-  autoPlayInterval?: number
-}
-
-export default function Carousel({ slides, autoPlay = true, autoPlayInterval = 5000 }: CarouselProps) {
-  const [currentSlide, setCurrentSlide] = useState(0)
-
-  useEffect(() => {
-    if (!autoPlay) return
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, autoPlayInterval)
-
-    return () => clearInterval(interval)
-  }, [autoPlay, autoPlayInterval, slides.length])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index)
-  }
-
-  return (
-    <div className="carousel-container relative h-[600px] rounded-lg overflow-hidden">
-      <div className="carousel-track h-full" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-        {slides.map((slide) => (
-          <div key={slide.id} className="carousel-slide relative h-full">
-            <Image
-              src={slide.image || "/placeholder.svg"}
-              alt={slide.title}
-              fill
-              className="object-cover"
-              priority={slide.id === 1}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-red-900/60 flex items-center">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                {/* Added proper margins to prevent text from being covered by arrows */}
-                <div className="max-w-2xl text-white mx-auto text-center lg:text-left lg:mx-0 px-16 sm:px-20 lg:px-0">
-                  <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">{slide.title}</h2>
-                  <p className="text-xl md:text-2xl mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                    {slide.description}
-                  </p>
-                  {slide.cta && slide.link && (
-                    <Link href={slide.link}>
-                      <button
-                        className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 animate-fade-in-up"
-                        style={{ animationDelay: "0.4s" }}
-                      >
-                        {slide.cta}
-                      </button>
-                    </Link>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Navigation Arrows */}
-      <button onClick={prevSlide} className="carousel-arrow prev group" aria-label="Previous slide">
-        <ChevronLeft
-          className="h-6 w-6 text-white group-hover:text-blue-200 transition-colors animate-arrow opacity-80"
-          style={{ animationDirection: "reverse" }}
-        />
-      </button>
-
-      <button onClick={nextSlide} className="carousel-arrow next group" aria-label="Next slide">
-        <ChevronRight className="h-6 w-6 text-white group-hover:text-blue-200 transition-colors animate-arrow opacity-80" />
-      </button>
-
-      {/* Dots Indicator */}
-      <div className="carousel-dots absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`carousel-dot ${index === currentSlide ? "active" : ""}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-
+/* Scroll Indicator */
 .scroll-indicator {
   position: fixed;
   top: 0;
