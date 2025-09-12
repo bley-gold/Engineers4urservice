@@ -193,7 +193,8 @@ nav .flex.items-center span {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.15);
+  /* Made arrows more transparent */
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 50%;
   width: 56px;
@@ -210,13 +211,14 @@ nav .flex.items-center span {
 }
 
 .carousel-arrow:hover {
-  background: rgba(255, 255, 255, 0.25);
+  /* Reduced hover opacity for better transparency */
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-50%) scale(1.15);
   box-shadow: var(--shadow-large);
 }
 
 .carousel-arrow:active {
-  transform: translateY(-50%) scale(1.05);
+  transform: translateY(-50%) scale(0.95);
 }
 
 .carousel-arrow.prev {
@@ -591,7 +593,8 @@ select:hover {
   .carousel-arrow {
     width: 48px;
     height: 48px;
-    background: rgba(0, 0, 0, 0.4);
+    /* More transparent arrows on tablet */
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .carousel-arrow.prev {
@@ -600,6 +603,22 @@ select:hover {
 
   .carousel-arrow.next {
     right: 16px;
+  }
+
+  .carousel-slide .max-w-4xl {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  .carousel-slide h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-slide p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -667,7 +686,8 @@ select:hover {
   .carousel-arrow {
     width: 40px;
     height: 40px;
-    background: rgba(0, 0, 0, 0.5);
+    /* More transparent arrows on mobile */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 30;
   }
 
@@ -729,6 +749,11 @@ select:hover {
   .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .carousel-slide .absolute.inset-0 {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -903,6 +928,29 @@ select:hover {
     min-width: 40px;
     min-height: 40px;
   }
+
+  .carousel-slide .absolute.inset-0 {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 374px) {
+  /* Smallest mobile screens - minimal arrow size but still usable */
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    /* Increased transparency for very small screens */
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .carousel-arrow.prev {
+    left: 12px;
+  }
+
+  .carousel-arrow.next {
+    right: 12px;
+  }
 }
 
 @media (max-width: 359px) {
@@ -910,7 +958,8 @@ select:hover {
   .carousel-arrow {
     width: 32px;
     height: 32px;
-    background: rgba(0, 0, 0, 0.7);
+    /* Maximum transparency for smallest screens */
+    background: rgba(0, 0, 0, 0.6);
   }
 
   .carousel-arrow.prev {
