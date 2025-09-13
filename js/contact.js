@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Create FormData object
       const formData = new FormData(this)
 
-      // Send form data
-      fetch("send-email.php", {
+      // Send form data to PHP script
+      fetch("vendor/send-email.php", {
         method: "POST",
         body: formData,
       })
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             showMessage("Thank you! Your message has been sent successfully.", "success")
             contactForm.reset()
           } else {
-            showMessage("Sorry, there was an error sending your message. Please try again.", "error")
+            showMessage(data.message || "Sorry, there was an error sending your message. Please try again.", "error")
           }
         })
         .catch((error) => {
