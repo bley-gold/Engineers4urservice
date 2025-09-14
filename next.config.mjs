@@ -31,11 +31,8 @@ const nextConfig = {
       {
         source: '/contact',
         destination: '/contact.html',
-      },
-      {
-        source: '/banking',
-        destination: '/banking.html',
       }
+  
     ]
   }
 }

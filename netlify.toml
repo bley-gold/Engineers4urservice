@@ -30,10 +30,6 @@
   to = "/contact.html"
   status = 200
 
-[[redirects]]
-  from = "/banking"
-  to = "/banking.html"
-  status = 200
 
 # Fallback for any other routes
 [[redirects]]
